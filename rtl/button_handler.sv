@@ -11,6 +11,21 @@ module button_handler(
     output logic start_send
   );
 
+// Logic of next_count and start_send
+always_ff @(posedge clk_100 or posedge a_rst)
+    if (a_rst) begin
+        next_count <= 0;
+        start_send <= 0;
+    end
+    else if (s_rst) begin
+        next_count <= 0;
+        start_send <= 0;
+    end
+    else begin
+        next_count <= button_0;
+        start_send <= button_1;
+    end
+
 sync_fd sync_fd_button_0(
     .clk_i(clk_100),
     .data_i(button_0),
