@@ -10,7 +10,7 @@ module sync_fd(
 
 reg [2:0] data_reg;
 
-always @(posedge clk_100) begin
+always @(posedge clk_i) begin
     data_reg[0] <= data_i;
     data_reg[1] <= data_reg[0];
     data_reg[2] <= data_reg[1];

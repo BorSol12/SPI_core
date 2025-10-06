@@ -14,13 +14,14 @@ module top(
     output logic SCK_HN,
     output logic SCK_LN,
     output logic CS,
-    output logic [P_DATA_WIDTH-1:0] MOSI
+    output logic MOSI
   );
 
   logic next_count_wire;
   logic start_send_wire;
   logic ready_wire;
   logic valid_wire;
+  logic sck_wire;
   logic [P_DATA_WIDTH-1:0] data_wire;
 
   button_handler handler(
@@ -30,8 +31,8 @@ module top(
     .button_0(button_0),
     .button_1(button_1),
 
-    .next_count(next_count_wire),
-    .start_send(start_send_wire)
+    .next_count_o(next_count_wire),
+    .start_send_o(start_send_wire)
     );
 
   data_former former(
@@ -46,14 +47,23 @@ module top(
     .data(data_wire)
     );
 
+  clk_divider clk_divider(
+    .clk_100(clk_100),
+    .s_rst(s_rst),
+    .a_rst(a_rst),
+
+    .sck_out(sck_wire)
+    );
+
   transmitter transmitter(
     .clk_100(clk_100),
     .s_rst(s_rst),
     .a_rst(a_rst),
 
+    .sck_in(sck_wire),
     .ready(ready_wire),
     .valid(valid_wire),
-    .data(data_wire),
+    .data_in(data_wire),
 
     .SCK_HP(SCK_HP),
     .SCK_LP(SCK_LP),

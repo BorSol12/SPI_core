@@ -8,7 +8,7 @@ module tb();
     logic clk_100;
     logic s_rst, a_rst;
     logic SCK_HP, SCK_LP, SCK_HN, SCK_LN, CS;
-    logic [P_DATA_WIDTH-1:0] MOSI;
+    logic MOSI;
 
     // instantiate DUT
     top dut (
