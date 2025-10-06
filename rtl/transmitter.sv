@@ -19,15 +19,17 @@ module transmitter(
     output logic MOSI
     );
 
-logic [$clog2(P_DATA_WIDTH)-1:0] bit_cnt;
-logic [P_DATA_WIDTH-1:0]         shift_reg;
+logic [$clog2(P_DATA_WIDTH):0] bit_cnt;
+logic [P_DATA_WIDTH-1:0]       shift_reg;
 
+// Состояния конечного автомата
 typedef enum logic [1:0] {
     IDLE, DATA_START, DATA_ASSIGN, SHIFT
 } statetype;
 
 statetype state, next_state;
 
+// Логика переключения конечного автомата
 always @(posedge clk_100 or posedge a_rst)
     if      (a_rst) state <= IDLE;
     else if (s_rst) state <= IDLE;
@@ -47,18 +49,18 @@ always_comb
                       else                next_state <= SHIFT;
     endcase
 
-
+// Основная логика передачи
 always_ff @(posedge clk_100 or posedge a_rst)
     if (a_rst) begin
         ready     <=  1;
-        shift_reg <= '1;
+        shift_reg <= '0;
         bit_cnt   <= '0;
         MOSI      <= '0;
         CS        <=  1; // CS в неактивном состоянии
     end
     else if (s_rst) begin
         ready     <=  1;
-        shift_reg <= '1;
+        shift_reg <= '0;
         bit_cnt   <= '0;
         MOSI      <= '0;
         CS        <=  1; // CS в неактивном состоянии
@@ -74,8 +76,9 @@ always_ff @(posedge clk_100 or posedge a_rst)
             SHIFT : begin
                 if (sck_in && !ready) begin
                     if (bit_cnt < P_DATA_WIDTH) begin
-                        MOSI    <= {shift_reg[P_DATA_WIDTH-1], 1'b0};
-                        bit_cnt <= bit_cnt + 1;
+                        shift_reg  <= {shift_reg[P_DATA_WIDTH-2:0], 1'b0};
+                        MOSI       <= shift_reg[P_DATA_WIDTH-1];
+                        bit_cnt    <= bit_cnt + 1;
                     end
                     else begin
                         bit_cnt <= '0;

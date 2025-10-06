@@ -18,16 +18,6 @@ QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
 Top level modules:
 	clk_divider
 
-} {} {}} C:/Users/boyan/Downloads/work/sim/src/tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/boyan/Downloads/work/sim/src/tb.sv
-QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
--- Compiling package config_pkg
--- Compiling package tb_sv_unit
--- Importing package config_pkg
--- Compiling module tb
-
-Top level modules:
-	tb
-
 } {} {}} C:/Users/boyan/Downloads/work/rtl/data_former.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/boyan/Downloads/work/rtl/data_former.sv
 QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
 -- Compiling package config_pkg
@@ -37,6 +27,16 @@ QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
 
 Top level modules:
 	data_former
+
+} {} {}} C:/Users/boyan/Downloads/work/rtl/transmitter.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/boyan/Downloads/work/rtl/transmitter.sv
+QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
+-- Compiling package config_pkg
+-- Compiling package transmitter_sv_unit
+-- Importing package config_pkg
+-- Compiling module transmitter
+
+Top level modules:
+	transmitter
 
 } {} {}} C:/Users/boyan/Downloads/work/rtl/button_handler.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/boyan/Downloads/work/rtl/button_handler.sv
 QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015

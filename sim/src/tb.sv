@@ -55,8 +55,14 @@ module tb();
     #10;
     button_1 = 0;
 
+    #600 button_0 = 1;
+    #50    button_0 = 0;
+
+    #120  button_1 = 1;
+    #20     button_1 = 0;
+
     // wait for completion
-    #2000;
+    #1000;
 
     $stop;
     end
