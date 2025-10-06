@@ -49,7 +49,7 @@ module tb();
     #10;
     button_0 = 0;
 
-    // wait and request send (button_1)
+    // wait and request buttons
     #200;
     button_1 = 1;
     #10;
@@ -60,6 +60,23 @@ module tb();
 
     #120  button_1 = 1;
     #20     button_1 = 0;
+
+
+    #500  button_0 = 1;
+    #20     button_0 = 0;
+
+    // async rst detected
+    #301 a_rst = 1;
+    #42    a_rst = 0;
+
+
+    // one more time wait and request buttons
+    #600 button_0 = 1;
+    #50    button_0 = 0;
+
+    #120  button_1 = 1;
+    #20     button_1 = 0;
+
 
     // wait for completion
     #1000;

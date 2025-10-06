@@ -55,14 +55,14 @@ always_ff @(posedge clk_100 or posedge a_rst)
         ready     <=  1;
         shift_reg <= '0;
         bit_cnt   <= '0;
-        MOSI      <= '0;
+        MOSI      <= 'z;
         CS        <=  1; // CS в неактивном состоянии
     end
     else if (s_rst) begin
         ready     <=  1;
         shift_reg <= '0;
         bit_cnt   <= '0;
-        MOSI      <= '0;
+        MOSI      <= 'z;
         CS        <=  1; // CS в неактивном состоянии
     end
     else begin
@@ -81,6 +81,7 @@ always_ff @(posedge clk_100 or posedge a_rst)
                         bit_cnt    <= bit_cnt + 1;
                     end
                     else begin
+                        MOSI    <= 'z;
                         bit_cnt <= '0;
                         ready   <=  1;
                         CS      <=  1;      // CS в неактивном состоянии

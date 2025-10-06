@@ -52,6 +52,7 @@ module top(
     .s_rst(s_rst),
     .a_rst(a_rst),
 
+    .sck_ready(ready_wire),
     .sck_out(sck_wire)
     );
 
