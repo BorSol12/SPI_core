@@ -9,327 +9,336 @@ z2
 cModel Technology
 Z0 dC:/questasim64_10.4c/examples
 T_opt
-!s110 1759477229
-VB;Z;WSUgNGizPKBHRPjle3
+!s110 1759864289
+Vl[I3lK<76SI2FiN8;:6XA1
 Z1 04 2 4 work tb fast 0
-=1-40b076425695-68df7ded-1d9-4f8
-o-quiet -auto_acc_if_foreign -work work
+=12-40b076425695-68e565e1-106-2460
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
 n@_opt
-Z2 OL;O;10.4c;61
+Z3 OL;O;10.4c;61
 R0
 T_opt1
-!s110 1759745914
-Vge>XYge0dgj6cD65j]Coj0
+!s110 1759902730
+VF>X1[;LIW;:[A7I`]53TV3
 R1
-=10-40b076425695-68e3977a-29f-3f48
-o-quiet -auto_acc_if_foreign -work work +acc
-n@_opt1
+=24-40b076425695-68e5fc0a-19a-5d0
 R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1759905294
+V0j8mzS:2VXQPL[NZQZB4c3
+R1
+=7-40b076425695-68e6060e-231-1160
+R2
+n@_opt2
+R3
 vbutton_handler
-Z3 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-!s110 1759745908
+Z4 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z5 !s110 1759905291
 !i10b 1
 !s100 `MSC1O?eFIQh9^RQ1C1ZV1
-Ine>S@RMT0Td_`lF9@6h0m1
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+I:]LCSg4@R==iPo^5IfOoR1
+Z6 VDg1SIo80bB@j0V0VzS_@n1
 !s105 button_handler_sv_unit
 S1
-Z5 dC:/Users/boyan/Downloads/work
-w1759734450
-8C:/Users/boyan/Downloads/work/rtl/button_handler.sv
-FC:/Users/boyan/Downloads/work/rtl/button_handler.sv
+Z7 dC:/Users/boyan/Downloads/SPI_core/SPI_core_1
+Z8 w1759859112
+8C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/button_handler.sv
+FC:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/button_handler.sv
 L0 2
-Z6 OL;L;10.4c;61
+Z9 OL;L;10.4c;61
 r1
 !s85 0
 31
-Z7 !s108 1759745908.000000
-!s107 C:/Users/boyan/Downloads/work/rtl/button_handler.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/work/rtl/button_handler.sv|
+Z10 !s108 1759905291.000000
+!s107 C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/button_handler.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/button_handler.sv|
 !i113 0
-Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vclk_divider
-R3
-Z9 DXx4 work 10 config_pkg 0 22 Jbcic3MY@5LlX6moL7e;E3
-DXx4 work 19 clk_divider_sv_unit 0 22 @N81nB3:MIPkU9<OB<nM=3
 R4
+Z12 DXx4 work 10 config_pkg 0 22 g<M9G?>F;^AT@c`>=cDUI0
+DXx4 work 19 clk_divider_sv_unit 0 22 g^fYDb:G:AW7PYQGHJ]S63
+R6
 r1
 !s85 0
 31
 !i10b 1
-!s100 <2I7BoY1zz1?Y[?nPiFQ53
-IMML`@5CK8Hiokh9VYb5mz2
+!s100 DNlL<f8<XDcJY;_iGIg][3
+I[l3Z^2QUEdZ4^Jki0:=n^0
 !s105 clk_divider_sv_unit
 S1
-R5
-Z10 w1759745801
-Z11 8C:/Users/boyan/Downloads/work/rtl/clk_divider.sv
-Z12 FC:/Users/boyan/Downloads/work/rtl/clk_divider.sv
+R7
+w1759900256
+Z13 8C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/clk_divider.sv
+Z14 FC:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/clk_divider.sv
 L0 4
-R6
-Z13 !s108 1759745909.000000
-Z14 !s107 C:\Users\boyan\Downloads\work\rtl\config_pkg.sv|C:/Users/boyan/Downloads/work/rtl/clk_divider.sv|
-Z15 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/work/rtl/clk_divider.sv|
-!i113 0
-R8
-Xclk_divider_sv_unit
-R3
 R9
-V@N81nB3:MIPkU9<OB<nM=3
+R10
+Z15 !s107 C:\Users\boyan\Downloads\SPI_core\SPI_core_1\rtl\config_pkg.sv|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/clk_divider.sv|
+Z16 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/clk_divider.sv|
+!i113 0
+R11
+Xclk_divider_sv_unit
+R4
+R12
+Vg^fYDb:G:AW7PYQGHJ]S63
 r1
 !s85 0
 31
 !i10b 1
-!s100 O_0;GWaXmJPNg8a777OY<0
-I@N81nB3:MIPkU9<OB<nM=3
+!s100 ZDdaCPEZBK;`Hgk9Uo>8=3
+Ig^fYDb:G:AW7PYQGHJ]S63
 !i103 1
 S1
-R5
-R10
-R11
-R12
-Z16 FC:\Users\boyan\Downloads\work\rtl\config_pkg.sv
-L0 2
-R6
+R7
+Z17 w1759905288
 R13
 R14
-R15
-!i113 0
-R8
-Xconfig_pkg
-R3
-Z17 !s110 1759745909
-!i10b 1
-!s100 Z<:90N3Szc<UlkF5o8^=L0
-IJbcic3MY@5LlX6moL7e;E3
-VJbcic3MY@5LlX6moL7e;E3
-S1
-R5
-Z18 w1759742768
-8C:\Users\boyan\Downloads\work\rtl\config_pkg.sv
-R16
+Z18 FC:\Users\boyan\Downloads\SPI_core\SPI_core_1\rtl\config_pkg.sv
 L0 2
-R6
+R9
+R10
+R15
+R16
+!i113 0
+R11
+Xconfig_pkg
+R4
+R5
+!i10b 1
+!s100 <XKXhG2Tg8aVMQ_oJDL5]1
+I7_8<c3N7FOJePHc30JT2Z3
+V7_8<c3N7FOJePHc30JT2Z3
+S1
+R7
+R17
+8C:\Users\boyan\Downloads\SPI_core\SPI_core_1\sim\src\..\..\rtl\config_pkg.sv
+Z19 FC:\Users\boyan\Downloads\SPI_core\SPI_core_1\sim\src\..\..\rtl\config_pkg.sv
+L0 2
+R9
 r1
 !s85 0
 31
-R13
-R14
-R15
+R10
+Z20 !s107 C:\Users\boyan\Downloads\SPI_core\SPI_core_1\sim\src\..\..\rtl\config_pkg.sv|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/sim/src/tb.sv|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/sim/src/tb.sv|
 !i113 0
-R8
+R11
 vdata_former
-R3
-R9
-DXx4 work 19 data_former_sv_unit 0 22 gh4o[A2ig5DXh5:Qd]>z62
 R4
+R12
+DXx4 work 19 data_former_sv_unit 0 22 BFBAlV@o?BBDY[o0Cj[aK1
+R6
 r1
 !s85 0
 31
 !i10b 1
 !s100 YfM81?dX^>[8ja;<fNJK42
-IoDI`E8=cT:kbE4H__F5Y30
+IeFC;m2``64:M5dW5D`d>z0
 !s105 data_former_sv_unit
 S1
-R5
-w1759729472
-Z19 8C:/Users/boyan/Downloads/work/rtl/data_former.sv
-Z20 FC:/Users/boyan/Downloads/work/rtl/data_former.sv
-L0 4
-R6
 R7
-Z21 !s107 C:\Users\boyan\Downloads\work\rtl\config_pkg.sv|C:/Users/boyan/Downloads/work/rtl/data_former.sv|
-Z22 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/work/rtl/data_former.sv|
-!i113 0
 R8
-Xdata_former_sv_unit
-R3
+Z22 8C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/data_former.sv
+Z23 FC:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/data_former.sv
+L0 4
 R9
-Vgh4o[A2ig5DXh5:Qd]>z62
+R10
+Z24 !s107 C:\Users\boyan\Downloads\SPI_core\SPI_core_1\rtl\config_pkg.sv|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/data_former.sv|
+Z25 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/data_former.sv|
+!i113 0
+R11
+Xdata_former_sv_unit
+R4
+R12
+VBFBAlV@o?BBDY[o0Cj[aK1
 r1
 !s85 0
 31
 !i10b 1
 !s100 ?4zUJ2QgWUFkjQn3W5fz`3
-Igh4o[A2ig5DXh5:Qd]>z62
+IBFBAlV@o?BBDY[o0Cj[aK1
 !i103 1
 S1
-R5
-R18
-R19
-R20
-R16
-L0 2
-R6
 R7
-R21
-R22
-!i113 0
-R8
-vsync_fd
-R3
 R17
+R22
+R23
+R18
+L0 2
+R9
+R10
+R24
+R25
+!i113 0
+R11
+vsync_fd
+R4
+R5
 !i10b 1
 !s100 hgPgH7H[DzjV?9R0P__1Y1
-I9mOm[GV7cm`CVfLbLQ9;k3
-R4
+IAO29eJU;WLh;iLlnZZ^:A3
+R6
 !s105 sync_fd_sv_unit
 S1
-R5
-w1759733060
-8C:/Users/boyan/Downloads/work/rtl/sync_fd.sv
-FC:/Users/boyan/Downloads/work/rtl/sync_fd.sv
+R7
+R8
+8C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/sync_fd.sv
+FC:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/sync_fd.sv
 L0 2
-R6
+R9
 r1
 !s85 0
 31
-R13
-!s107 C:/Users/boyan/Downloads/work/rtl/sync_fd.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/work/rtl/sync_fd.sv|
+R10
+!s107 C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/sync_fd.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/sync_fd.sv|
 !i113 0
-R8
+R11
 vtb
-R3
-Z23 DXx4 work 10 config_pkg 0 22 [GJmN<I21FhzO1WM?>M[90
-DXx4 work 10 tb_sv_unit 0 22 jj=]`HG6bK`P[WDSRlGSJ1
 R4
+Z26 DXx4 work 10 config_pkg 0 22 7_8<c3N7FOJePHc30JT2Z3
+DXx4 work 10 tb_sv_unit 0 22 JS@:TTSC`oE=D:AYEj[FL3
+R6
 r1
 !s85 0
 31
 !i10b 1
 !s100 [OoZn<anfWD0hAeKof[<a0
-IEWQAGN;ob=3j3]n[5;_0b3
+I<A397fbYFfNi4cDB0M]O33
 !s105 tb_sv_unit
 S1
-R5
-Z24 w1759744483
-Z25 8C:/Users/boyan/Downloads/work/sim/src/tb.sv
-Z26 FC:/Users/boyan/Downloads/work/sim/src/tb.sv
-L0 6
-R6
 R7
-Z27 !s107 C:\Users\boyan\Downloads\work\sim\src\..\..\rtl\config_pkg.sv|C:/Users/boyan/Downloads/work/sim/src/tb.sv|
-Z28 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/work/sim/src/tb.sv|
-!i113 0
 R8
+Z27 8C:/Users/boyan/Downloads/SPI_core/SPI_core_1/sim/src/tb.sv
+Z28 FC:/Users/boyan/Downloads/SPI_core/SPI_core_1/sim/src/tb.sv
+L0 6
+R9
+R10
+R20
+R21
+!i113 0
+R11
 Xtb_sv_unit
-R3
-R23
-Vjj=]`HG6bK`P[WDSRlGSJ1
+R4
+R26
+VJS@:TTSC`oE=D:AYEj[FL3
 r1
 !s85 0
 31
 !i10b 1
 !s100 40a1SS<0O:QeU^VBC@oFJ2
-Ijj=]`HG6bK`P[WDSRlGSJ1
+IJS@:TTSC`oE=D:AYEj[FL3
 !i103 1
 S1
-R5
-R24
-R25
-R26
-FC:\Users\boyan\Downloads\work\sim\src\..\..\rtl\config_pkg.sv
-L0 4
-R6
 R7
+R17
 R27
 R28
-!i113 0
-R8
-vtop
-R3
+R19
+L0 4
 R9
-DXx4 work 11 top_sv_unit 0 22 ScA`OUi^3dQlOZEQ5Bd2F2
+R10
+R20
+R21
+!i113 0
+R11
+vtop
 R4
+R12
+DXx4 work 11 top_sv_unit 0 22 oRi6YchMc_380LRR@TQgU2
+R6
 r1
 !s85 0
 31
 !i10b 1
 !s100 EC5ZYoFG81FDl>ANg;^F<0
-IK[LaafU]mId4M4`ZH`:b:0
+I@Kmo:3PJnRI3jPF=09eEP1
 !s105 top_sv_unit
 S1
-R5
-Z29 w1759745035
-Z30 8C:/Users/boyan/Downloads/work/rtl/top.sv
-Z31 FC:/Users/boyan/Downloads/work/rtl/top.sv
-L0 4
-R6
 R7
-Z32 !s107 C:\Users\boyan\Downloads\work\rtl\config_pkg.sv|C:/Users/boyan/Downloads/work/rtl/top.sv|
-Z33 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/work/rtl/top.sv|
-!i113 0
-R8
-Xtop_sv_unit
-R3
+w1759900263
+Z29 8C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/top.sv
+Z30 FC:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/top.sv
+L0 4
 R9
-VScA`OUi^3dQlOZEQ5Bd2F2
+R10
+Z31 !s107 C:\Users\boyan\Downloads\SPI_core\SPI_core_1\rtl\config_pkg.sv|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/top.sv|
+Z32 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/top.sv|
+!i113 0
+R11
+Xtop_sv_unit
+R4
+R12
+VoRi6YchMc_380LRR@TQgU2
 r1
 !s85 0
 31
 !i10b 1
 !s100 Y1IX0E@:^IZaB[l:QOjma1
-IScA`OUi^3dQlOZEQ5Bd2F2
+IoRi6YchMc_380LRR@TQgU2
 !i103 1
 S1
-R5
+R7
+R17
 R29
 R30
-R31
-R16
+R18
 L0 2
-R6
-R7
-R32
-R33
-!i113 0
-R8
-vtransmitter
-R3
 R9
-DXx4 work 19 transmitter_sv_unit 0 22 Ac:PaNUIkkXJS76Gf_fBA0
+R10
+R31
+R32
+!i113 0
+R11
+vtransmitter
 R4
+R12
+DXx4 work 19 transmitter_sv_unit 0 22 jPVS8cVVFjI];9I^:a?0M3
+R6
 r1
 !s85 0
 31
 !i10b 1
-!s100 k`Y=<YX2gJo1N@<8;[=DK0
-ICg0[meL`3]RNlSiQi2TFT0
+!s100 O=O1AV5fOVMOOI<@iJA]V3
+IdnGOhcT:MLQZ2Xkz]881^2
 !s105 transmitter_sv_unit
 S1
-R5
-Z34 w1759745902
-Z35 8C:/Users/boyan/Downloads/work/rtl/transmitter.sv
-Z36 FC:/Users/boyan/Downloads/work/rtl/transmitter.sv
-L0 4
-R6
 R7
-Z37 !s107 C:\Users\boyan\Downloads\work\rtl\config_pkg.sv|C:/Users/boyan/Downloads/work/rtl/transmitter.sv|
-Z38 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/work/rtl/transmitter.sv|
-!i113 0
-R8
-Xtransmitter_sv_unit
-R3
+w1759905280
+Z33 8C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/transmitter.sv
+Z34 FC:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/transmitter.sv
+L0 4
 R9
-VAc:PaNUIkkXJS76Gf_fBA0
+R10
+Z35 !s107 C:\Users\boyan\Downloads\SPI_core\SPI_core_1\rtl\config_pkg.sv|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/transmitter.sv|
+Z36 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/boyan/Downloads/SPI_core/SPI_core_1/rtl/transmitter.sv|
+!i113 0
+R11
+Xtransmitter_sv_unit
+R4
+R12
+VjPVS8cVVFjI];9I^:a?0M3
 r1
 !s85 0
 31
 !i10b 1
-!s100 FLCKo3VS^:nbXJJ>BI3:E1
-IAc:PaNUIkkXJS76Gf_fBA0
+!s100 1dFMG^jI@6lcl1K@zl5`N0
+IjPVS8cVVFjI];9I^:a?0M3
 !i103 1
 S1
-R5
+R7
+R17
+R33
 R34
+R18
+L0 2
+R9
+R10
 R35
 R36
-R16
-L0 2
-R6
-R7
-R37
-R38
 !i113 0
-R8
+R11

@@ -1,5 +1,5 @@
 `include "config_pkg.sv"
-import config_pkg::P_CLK_DIV;
+import config_pkg::*;
 
 module clk_divider(
     input clk_100,
@@ -24,13 +24,15 @@ always_ff @(posedge clk_100 or posedge a_rst)
     else begin
         if (!sck_ready) begin
             if (clk_cnt == P_CLK_DIV/2 - 1) begin
-                sck_out <=  1;
+                sck_out <= !sck_out;
                 clk_cnt <= '0;
             end
             else begin
-                sck_out <= 0;
                 clk_cnt <= clk_cnt + 1;
             end
+        end
+        else begin
+            sck_out <= 0;
         end
     end
 

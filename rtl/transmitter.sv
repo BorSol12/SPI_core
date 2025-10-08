@@ -21,6 +21,7 @@ module transmitter(
 
 logic [$clog2(P_DATA_WIDTH):0] bit_cnt;
 logic [P_DATA_WIDTH-1:0]       shift_reg;
+logic                          sck_in_d;
 
 // Состояния конечного автомата
 typedef enum logic [1:0] {
@@ -42,12 +43,20 @@ always_comb
         
         DATA_START  :                     next_state <= DATA_ASSIGN;
 
-        DATA_ASSIGN : if (~CS)            next_state <= SHIFT;
-                      else                next_state <= DATA_ASSIGN;
+        DATA_ASSIGN :                     next_state <= SHIFT;
 
-        SHIFT       : if (CS)             next_state <= IDLE;
+        SHIFT       : if (ready)          next_state <= IDLE;
                       else                next_state <= SHIFT;
     endcase
+
+// разрешающий сигнал для сдвига
+always_ff @(posedge clk_100 or posedge a_rst)
+    if      (a_rst) sck_in_d <= 0;
+    else if (s_rst) sck_in_d <= 0;
+    else            sck_in_d <= sck_in;
+
+assign sck_en = sck_in & ~sck_in_d;
+
 
 // Основная логика передачи
 always_ff @(posedge clk_100 or posedge a_rst)
@@ -66,16 +75,16 @@ always_ff @(posedge clk_100 or posedge a_rst)
         CS        <=  1; // CS в неактивном состоянии
     end
     else begin
-        case(next_state)
+        case(state)
             DATA_ASSIGN : begin
-                CS        <= 0;         // CS в активном состоянии
                 shift_reg <= data_in;
                 ready     <= 0;
             end
 
             SHIFT : begin
-                if (sck_in && !ready) begin
+                if (sck_en) begin
                     if (bit_cnt < P_DATA_WIDTH) begin
+                        CS         <= 0;     // CS в активном состоянии
                         shift_reg  <= {shift_reg[P_DATA_WIDTH-2:0], 1'b0};
                         MOSI       <= shift_reg[P_DATA_WIDTH-1];
                         bit_cnt    <= bit_cnt + 1;
@@ -95,32 +104,32 @@ always_ff @(posedge clk_100 or posedge a_rst)
 // Logic of SCK_LP and SCK_HP
 always_ff @(posedge clk_100 or posedge a_rst)
     if (a_rst) begin
-        SCK_LP = 0;   // Mode 0: CPOL=0, CPHA=0
-        SCK_HP = 1;   // Mode 2: CPOL=1, CPHA=0
+        SCK_LP = 0;   // CPOL=0, CPHA=1
+        SCK_HN = 1;   // CPOL=1, CPHA=1
     end
     else if (s_rst) begin
         SCK_LP <=  sck_in;
-        SCK_HP <= !sck_in;
+        SCK_HN <= !sck_in;
     end
     else begin
         SCK_LP <=  sck_in;
-        SCK_HP <= !sck_in;
+        SCK_HN <= !sck_in;
     end
 
 
 // Logic of SCK_LN and SCK_HN
 always_ff @(negedge clk_100 or posedge a_rst)
     if (a_rst) begin
-        SCK_LN = 0;   // Mode 1: CPOL=0, CPHA=1
-        SCK_HN = 1;   // Mode 3: CPOL=1, CPHA=1
+        SCK_HP = 0;   // CPOL=1, CPHA=0
+        SCK_LN = 1;   // CPOL=0, CPHA=0
     end
     else if (s_rst) begin
-        SCK_LN <= !sck_in;
-        SCK_HN <=  sck_in;
+        SCK_HP <= !sck_in;
+        SCK_LN <=  sck_in;
     end
     else begin
-        SCK_LN <= !sck_in;
-        SCK_HN <=  sck_in;
+        SCK_HP <= !sck_in;
+        SCK_LN <=  sck_in;
     end
 
 
