@@ -17,7 +17,7 @@ always @(posedge clk_i) begin
 end
 
 assign data_sync_o    =  data_reg[2]; 
-assign data_sync_pe_o =  data_reg[2] & ~data_reg[1];
-assign data_sync_ne_o = ~data_reg[2] &  data_reg[1];
+assign data_sync_ne_o =  data_reg[2] & ~data_reg[1];
+assign data_sync_pe_o = ~data_reg[2] &  data_reg[1];
 
 endmodule
